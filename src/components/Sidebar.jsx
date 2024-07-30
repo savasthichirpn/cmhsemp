@@ -2,20 +2,19 @@ import { List, ListItem, ListIcon, Box, Flex, Text } from "@chakra-ui/react"
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import { NavLink } from "react-router-dom"
 import { Image } from '@chakra-ui/react'
-import HumanResourcePolicyManual from "../Model/HumanResourcePolicyManual"
+
 import { useState } from "react"
 import PolictManual from '../../dist/assets/PDF/CMHS_HR_book.pdf';
+import HumanResourcePolicyManual from "./Model/HumanResourcePolicyManual"
 
 export default function Sidebar() {
-  // Initialize state with a default value (false) to control the visibility of the modal
-  const [isOpen, setIsOpen] = useState(false)
 
-  // Toggle function to open/close the modal
+  const [isOpen, setIsOpen] = useState(false)
   const toggleModal = () => setIsOpen(prev => !prev)
 
   return (
     <>
-      {/* Render HumanResourcePolicyManual conditionally based on `isOpen` state */}
+
       {isOpen && <HumanResourcePolicyManual isOpen={isOpen} onClose={toggleModal} PdfFile={PolictManual} />}
 
       <Box as="aside" h="100vh" w="234px">

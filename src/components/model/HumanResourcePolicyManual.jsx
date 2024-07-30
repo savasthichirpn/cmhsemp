@@ -1,6 +1,5 @@
 import React from 'react';
 import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Button } from '@chakra-ui/react';
-import PolictManual from '../../dist/assets/PDF/CMHS_HR_book.pdf';
 
 export default function HumanResourcePolicyManual({ isOpen, onClose, PdfFile }) {
     return (
