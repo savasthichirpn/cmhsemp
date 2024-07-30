@@ -27,7 +27,7 @@ export default function ShopLoginForce() {
     const navigate = useNavigate();
 
     const validationSchema = object().shape({
-        email: string().trim().required(loginValidation.emailRequired).matches(emailRegex.loginValidation.emailInvalid),
+        email: string().trim().required(loginValidation.emailRequired).email(loginValidation.emailInvalid),
         password: string().trim().required(loginValidation.passwordRequired).matches(
             /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
             loginValidation.passwordInvalid
