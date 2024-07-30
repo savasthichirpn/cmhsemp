@@ -32,8 +32,7 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
-dist
-/dist
+index-0c599dbb.js
 
 # zip
 *.zip
